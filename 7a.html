@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Document Object Example</title> 
+<style> 
+#output { 
+margin-top: 20px; 
+color: green; 
+font-weight: bold; 
+} 
+</style> 
+</head> 
+<body> 
+<h1>DOM Example</h1> 
+<p id="intro">Click the button to change this text and add a new paragraph.</p> 
+<button onclick="manipulateDOM()">Click Me</button> 
+<div id="output"></div>
+<script>  
+function manipulateDOM() { 
+// Access and modify an element 
+const intro = document.getElementById('intro'); 
+intro.innerHTML = 'The paragraph text has been changed!'; 
+intro.style.color = 'blue'; 
+// Create a new element 
+const newPara = document.createElement('p'); 
+newPara.textContent = 'This paragraph was created using the document object.'; 
+// Append the new element 
+const outputDiv = document.getElementById('output'); 
+outputDiv.appendChild(newPara); 
+} 
+</script> 
+</body> 
+</html>
