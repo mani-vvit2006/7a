@@ -1,0 +1,28 @@
+<!doctype html> 
+<html> 
+<head> 
+<title>Demonstration of Math Object</title> 
+</head> 
+<body> 
+<script> 
+// Get the radius of a circle from the user 
+let radius = parseFloat (prompt("Enter the radius of the circle:")); 
+// Use Math.PI and Math.pow to calculate area 
+let area = Math.PI * Math.pow(radius, 2); 
+// Use Math.PI to calculate circumference 
+let circumference = 2 * Math.PI * radius; 
+// Use Math.round to round the results 
+let roundedArea = Math.round(area); 
+let roundedCircumference = Math.round(circumference); 
+// Display results 
+console.log("Radius: " + radius); 
+console.log("Area (rounded): " + roundedArea); 
+console.log("Circumference (rounded): " + roundedCircumference); 
+// Additional Math methods 
+console.log("Square root of radius: "+ Math.sqrt(radius)); 
+console.log("Ceiling of area: "+ Math.ceil(area));
+console.log("Floor of circumference: "+ Math.floor(circumference));
+console.log("Random number between 0 and 1: "+ Math.random()); 
+</script> 
+</body> 
+</html>
