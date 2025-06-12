@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Window Object Example</title> 
+</head> 
+<body> 
+<h2>JavaScript Window Object Demo</h2> 
+<button onclick="showWindowInfo()">Show Window Info</button> 
+<script> 
+function showWindowInfo() { 
+// Using window.innerWidth and window.innerHeight 
+alert("Window size:\nWidth: " + window.innerWidth + "\nHeight: " + window.innerHeight); 
+// Using window.confirm 
+var userConfirmed = window.confirm("Do you want to visit VVIT Guntur website?"); 
+// Using window.open 
+if (userConfirmed) { 
+window.open("https://www.vvitguntur.com", "blank"); 
+} else { 
+alert("Okay, staying on this page!"); 
+} 
+// Using window.location 
+console.log("Current URL: "+ window.location.href); 
+} 
+</script> 
+</body> 
+</html>
