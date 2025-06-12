@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Array Object Demo</title> 
+</head> 
+<body> 
+<h2>Array Object Properties and Methods</h2> 
+<p id="output"></p> 
+<script> 
+let fruits = ["Banana", "Apple", "Mango"]; 
+let result = "Original Array: "+ fruits.join(", ") + "<br>"; 
+result += "Length of Array: " + fruits.length + "<br>"; 
+fruits.push("Orange"); 
+result += "After push('Orange'): " + fruits.join(", ") + "<br>"; 
+fruits.pop(); 
+result += "After pop(): " + fruits.join(", ") + "<br>"; 
+fruits.sort(); 
+result += "After sort(): " + fruits.join(", ") + "<br>"; 
+fruits.reverse(); 
+result += "After reverse(): "+ fruits.join(", ") + "<br>"; 
+document.getElementById("output").innerHTML = result; 
+</script> 
+</body> 
+</html>
