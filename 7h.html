@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User-Defined Object Example</title>
+</head>
+<body>
+  <h2>User-Defined Object with Properties, Methods, Accessors, and Constructor</h2>
+  <div id="output"></div>
+
+  <script>
+    // Constructor function for a Person object
+    function Person(firstName, lastName, age) {
+      this.firstName = firstName; // Property
+      this.lastName = lastName;   // Property
+      this._age = age;            // "Private" property
+
+      // Method to get full name
+      this.getFullName = function() {
+        return this.firstName + " " + this.lastName;
+      };
+
+      // Getter and setter for age using accessor property
+      Object.defineProperty(this, "age", {
+        get: function() {
+          return this._age;
+        },
+        set: function(value) {
+          if (value > 0) {
+            this._age = value;
+          } else {
+            console.warn("Invalid age");
+          }
+        }
+      });
+    }
+
+    // Creating an object
+    let person1 = new Person("John", "Doe", 25);
+
+    // Modifying age
+    person1.age = 30;
+
+    // Displaying object data
+    document.getElementById("output").innerHTML = `
+      <strong>Name:</strong> ${person1.getFullName()}<br>
+      <strong>Age:</strong> ${person1.age}
+    `;
+  </script>
+</body>
+</html>
