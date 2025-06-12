@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>RegExp Example</title>
+</head>
+<body>
+    <h2>Regex Test in JavaScript</h2>
+    <p>Enter a word that contains "cat":</p>
+    <input type="text" id="userInput">
+    <button onclick="testRegex()">Test</button>
+    <p id="result"></p>
+    <script>
+    function testRegex() {
+        const pattern = /cat/gi; // RegExp with global and case-insensitive flags
+        const input = document.getElementById("userInput").value;
+        const resultEl = document.getElementById("result");
+        
+        // Using RegExp methods
+        const isMatch = pattern.test(input); // returns true or false
+        const matchDetails = pattern.exec(input); // returns match info or null
+        
+        // Accessing RegExp properties
+        let output = `Pattern: ${pattern.source}<br>`;
+        output += `Ignore Case: ${pattern.ignoreCase}<br>`;
+        output += `Global Search: ${pattern.global}<br>`;
+        output += `Test Result: ${isMatch}<br>`;
+        output += `Match Details: ${matchDetails ? matchDetails[0] : 'No match'}<br>`;
+        resultEl.innerHTML = output;
+    }
+    </script>
+</body>
+</html>
