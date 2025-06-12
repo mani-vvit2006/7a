@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demonstration of String Object</title>
+</head>
+<body>
+<script>
+let message = " Hello, JavaScript World! ";
+console.log("Length of message:", message.length);
+let trimmedMessage = message.trim();
+console.log("Trimmed message:", trimmedMessage);
+console.log("Uppercase:", trimmedMessage.toUpperCase());
+console.log("Lowercase:", trimmedMessage.toLowerCase());
+console.log("Contains 'JavaScript'?", trimmedMessage.includes("JavaScript"));
+console.log("Position of 'JavaScript':", trimmedMessage.indexOf("JavaScript"));
+console.log("Slice (7, 17):", trimmedMessage.slice(7, 17));
+let newMessage = trimmedMessage.replace("JavaScript", "JS");
+console.log("Replaced message:", newMessage);
+let words = trimmedMessage.split(" ");
+console.log("Words in message:", words);
+</script>
+</body>
+</html>
